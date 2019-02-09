@@ -1,17 +1,17 @@
 {% set version = "2.3.0" %}
-{% set sha256 = "81522d7e9b63b66970314e63c1aad69a383541de2d4052fa3e69f892a5bf5dfc" %}
+{% set sha256 = "e4c02874be09790379c0385ec9cc594fc07c1ae9822e4be1c9947df74b304c33" %}
 
 package:
   name: constructor
   version: {{ version }}
 
 source:
-  fn: constructor-{{ version }}.tar.gz
-  url: https://github.com/conda/constructor/archive/{{ version }}.tar.gz
+  fn: constructor-{{ version }}-osgeo.tar.gz
+  url: https://github.com/osgeo-forge/constructor/archive/810f04b08c5b5c17f0668aa3d924286fd8b5575d.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1010
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - constructor = constructor.main:main
@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - mbargull
+    - dakcarto
