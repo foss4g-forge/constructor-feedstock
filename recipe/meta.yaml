@@ -1,5 +1,5 @@
 {% set version = "2.3.0" %}
-{% set sha256 = "e4c02874be09790379c0385ec9cc594fc07c1ae9822e4be1c9947df74b304c33" %}
+{% set sha256 = "b271bccfe655c73f5962f49bbe003f7bd7f14cadde7bcc6650100d84f1bcfe9b" %}
 
 package:
   name: constructor
@@ -7,11 +7,11 @@ package:
 
 source:
   fn: constructor-{{ version }}-osgeo.tar.gz
-  url: https://github.com/osgeo-forge/constructor/archive/810f04b08c5b5c17f0668aa3d924286fd8b5575d.tar.gz
+  url: https://github.com/osgeo-forge/constructor/archive/997d36deb8e4529a044dfda849c6d0735e673eeb.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1010
+  number: 1011
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - constructor = constructor.main:main
